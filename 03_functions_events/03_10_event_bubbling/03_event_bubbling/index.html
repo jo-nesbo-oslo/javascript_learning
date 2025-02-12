@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Div Elements</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .grandparent {
+            height: 350px;
+            width: 350px;
+            border: 2px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffe5e5;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            position: relative;
+            flex-direction: column;
+        }
+
+        .parent {
+            height: 250px;
+            width: 250px;
+            border: 2px solid blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e5f2ff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex-direction: column;
+        }
+
+        .child {
+            height: 150px;
+            width: 150px;
+            border: 2px solid green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e5ffe5;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grandparent" id="one">
+        Grandparent
+        <div class="parent" id="two">
+            Parent
+            <div class="child" id="three">
+                Child
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('parent').addEventListener('click', (event) => {
+            console.log('Clicked:', event.target.id);
+        });
+
+    </script>
+</body>
+
+</html>
+``

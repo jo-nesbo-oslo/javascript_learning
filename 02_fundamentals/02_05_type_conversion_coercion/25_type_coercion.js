@@ -15,11 +15,12 @@ console.log(res);
 let s = "10";
 let n = 10;
 console.log(s == n);  // true, JavaScript converts str to number
+console.log(s === n);
 
 // 4. Boolean Context
 let s = "";
 if (s) {
-    console.log("This won't print");  // Empty string is falsy
+    console.log("This won't print");  // Empty string is fals
 } else {
     console.log("This will print");  // Empty string is coerced to false
 }

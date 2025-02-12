@@ -8,7 +8,7 @@ console.error("This is an error message.");
 console.warn("This is a warning message.");
 
 // 4. console.info()
-console.info('This is a styled info message!', 'color: blue; font-size: 16px; font-weight: bold;');
+console.info('%cThis is a styled info message!', 'color: blue; font-size: 16px; font-weight: bold;');
 
 // 5. console .table()
 console.table([{name: "Amit", age: 30}, {name: "Jatin", age: 25}]);
@@ -49,3 +49,4 @@ function c() {
     console.trace()
 }
 a();
+

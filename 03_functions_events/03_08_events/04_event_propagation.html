@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <script async>
+        document.addEventListener("DOMContentLoaded", () => {
+            let button = document.getElementById("myButton");
+            document.querySelector("div").addEventListener("click", () => {
+                console.log("Div clicked");
+            }, true); // Capturing phase
+
+            button.addEventListener("click", (e) => {
+                console.log("Button clicked");
+                e.stopPropagation(); // Stops propagation
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div style="border: 1px solid #ddd; padding: 15px; border-radius: 5px; background-color: #f9f9f9;">
+        <span style="font-size: 16px; color: #333;">Inside div</span><br>
+        <button id="myButton"
+            style="margin-top: 10px; padding: 10px 20px; border: none; background-color: #4CAF50; color: white; border-radius: 3px; cursor: pointer; transition: background-color 0.3s;">
+            Click Me With Events
+        </button>
+    </div>
+
+</body>
+
+</html>

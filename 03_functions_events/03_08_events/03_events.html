@@ -1,0 +1,23 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <button onclick="alert('Button clicked!')">Click Me</button>
+    <br>
+    <button id="myButton" style="margin-top: 10px;">Click Me With Events</button>
+    <script async>
+        let btn = document.getElementById("myButton");
+        btn.onclick = () => {
+            alert("Button clicked!");
+        };
+
+        btn.addEventListener("click", () => {
+            alert("Button clicked using addEventListener!");
+        });
+    </script>
+</body>
+
+</html>
