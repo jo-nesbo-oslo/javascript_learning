@@ -1,9 +1,13 @@
 function outerFun(a) {
-    function innerFun(b) {
-        return a + b;
+    function outerInnerFun(b) {
+        function innerFun(c) {
+            return a + b + c;
+        }
+        return innerFun;
     }
-    return innerFun;
+    return outerInnerFun;
 }
 
 const addTen = outerFun(10);
-console.log(addTen(5));
+const addFive = addTen(5);
+console.log(addFive(8));

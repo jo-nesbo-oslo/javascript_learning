@@ -6,4 +6,4 @@ const person = {
 };
 person.greet('Delhi', 'India'); 
 const greet = person.greet;
-greet.apply(person, ['Noida', 'Delhi']); 
+greet.apply(person, ['San Miguel Allende', 'México']); 
