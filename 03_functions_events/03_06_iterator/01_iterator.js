@@ -1,4 +1,4 @@
- <script> 
+// <script> 
 	const array = ['a', 'b', 'c']; 
 	
 	const it = array[Symbol.iterator](); 
@@ -19,4 +19,4 @@
 	done: true } but here you will get 
 	{done: true} output because of JSON.stringify 
 	as it omits undefined values*/
-</script>
+//</script>
