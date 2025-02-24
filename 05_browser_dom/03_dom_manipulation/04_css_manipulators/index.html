@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM Manipulation Techniques</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 40px;
+        }
+
+        h1, h2, h3 {
+            margin: 20px 0;
+            padding: 10px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        h1 {
+            color: #ffffff;
+            background-color: #007BFF;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            color: #ffffff;
+            background-color: #6c757d;
+            font-size: 2em;
+            font-style: italic;
+        }
+
+        h3.classList {
+            color: #ffffff;
+            background-color: #28a745;
+            font-size: 1.5em;
+        }
+
+        h1:hover, h2:hover, h3:hover {
+            transform: scale(1.1);
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            text-align: left;
+        }
+
+        p {
+            color: #333333;
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hello 1</h1>
+        <h2>Hello 2</h2>
+        <h3 class="classList">Hello 3</h3>
+    </div>
+    <script>
+        const tcontentexample = document.querySelector("h1");
+        const innerhtmlexample = document.querySelector("h2");
+        const innertextexample = document.querySelector("h3");
+
+        tcontentexample.style.color = "white";
+        tcontentexample.style.backgroundColor = "black";
+        tcontentexample.style.textAlign = "center";
+
+        innerhtmlexample.style.cssText = `
+            color: white;
+            background-color: black;
+            text-align: center;
+        `;
+
+        innertextexample.classList.add("classList");
+
+        const para = document.createElement("p");
+        para.textContent = "This paragraph is created using createElement!";
+        document.body.appendChild(para);
+
+        const para1 = document.createTextNode("This paragraph is created using createTextNode");
+        const newPara = document.createElement("p");
+        newPara.appendChild(para1);
+        document.body.appendChild(newPara);
+    </script>
+</body>
+
+</html>

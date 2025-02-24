@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM Manipulation Techniques</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            margin: 10px 0;
+        }
+
+        h1 {
+            color: #333333;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            color: #555555;
+            font-size: 2em;
+            font-style: italic;
+        }
+
+        h3 {
+            color: #777777;
+            font-size: 1.5em;
+        }
+
+        p {
+            color: #999999;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello 1</h1>
+    <h2>Hello 2</h2>
+    <h3>Hello 3</h3>
+    <script>
+        const para = document.createElement("p");
+        para.textContent = "This paragraph is created using createElement!";
+        document.body.appendChild(para);
+
+        const para1 = document.createTextNode("p");
+        const newPara = document.createElement("p");
+        para1.textContent = 
+            "This paragraph is created using createTextNode";
+        newPara.appendChild(para1);
+        document.body.appendChild(newPara);
+    </script>
+</body>
+
+</html>

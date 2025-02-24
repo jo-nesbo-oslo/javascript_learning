@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM and Events</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            width: 300px;
+            background-color: #FF6F61;
+            color: white;
+            font-size: 30px;
+            font-weight: bolder;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container:hover {
+            background-color: #ff4757;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">GeeksforGeeks</div>
+    <script>
+        let container = document.querySelector('.container');
+        container.addEventListener('click', function () {
+            container.style.color = "black";
+        });
+    </script>
+</body>
+
+</html>
