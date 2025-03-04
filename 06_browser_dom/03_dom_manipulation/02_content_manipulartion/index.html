@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html?>
+
+    <head>
+        <title>DOM Manipulation Techniques</title>
+        <style>
+            body {
+                text-align: center;
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+                margin: 0;
+                padding: 20px;
+            }
+
+            h1,
+            h2,
+            h3 {
+                margin: 10px 0;
+            }
+
+            h1 {
+                color: #333333;
+                font-size: 2.5em;
+            }
+
+            h2 {
+                color: #555555;
+                font-size: 2em;
+                font-style: italic;
+            }
+
+            h3 {
+                color: #777777;
+                font-size: 1.5em;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Hello</h1>
+        <h2>Hello</h2>
+        <h3>Hello</h3>
+        <script>
+            const tcontentexample = document.querySelector("h1");
+            const innerhtmlexample = document.querySelector("h2");
+            const innertextexample = document.querySelector("h3");
+
+            setTimeout(() => {
+                tcontentexample.textContent = "Hello Geeks!- textContent";
+
+                setTimeout(() => {
+
+                    innerhtmlexample.innerHTML = "Hello Geeks!- innerHTML";
+                    setTimeout(() => {
+
+                        innertextexample.innerText = "Hello Geeks! - innerText";
+                    }, 1000)
+                }, 1000)
+
+
+            }, 2000)
+        </script>
+    </body>
+
+</html?>
