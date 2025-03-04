@@ -3,7 +3,8 @@ b = A.slice(0, 5);
 c = A.slice(6, 9);
 d = A.slice(10);
 /*
-The slice() method in JavaScript is used to extract a portion of a string and create a new string without modifying the original string.
+The slice() method in JavaScript is used to extract a portion of a string and 
+create a new string without modifying the original string.
 
 Syntax:
 string.slice(startingIndex, endingIndex);

@@ -1,6 +1,8 @@
 // Strict Mode
-// Strict mode was introduced in ECMAScript 5 (ES5) to address some of the pitfalls of JavaScript and to make it easier 
-// to write “secure” JavaScript. To enable strict mode, you can add the following declaration at the top of your 
+// Strict mode was introduced in ECMAScript 5 (ES5) to address some of the 
+// pitfalls of JavaScript and to make it easier 
+// to write “secure” JavaScript. To enable strict mode, you can add t
+// he following declaration at the top of your 
 // script or function:
 
 // "use strict";
@@ -34,7 +36,8 @@ obj.prop = 17; // TypeError: Cannot assign to read-only property 'prop'
 
 var x = 010; // SyntaxError: Octal literals are not allowed in strict mode.
 
-// 5. Duplicate Property Names: In strict mode, having duplicate property names in an object literal is not allowed.
+// 5. Duplicate Property Names: In strict mode, 
+// having duplicate property names in an object literal is not allowed.
 "use strict"; 
 var obj = { prop: 1, prop: 2 }; // SyntaxError: Duplicate data property in object literal not allowed in strict mode.
 function bar(y, y) { // Throws a syntax error 
@@ -42,7 +45,8 @@ function bar(y, y) { // Throws a syntax error
 }
 
 
-// 6. Reserved Keywords: Some keywords are reserved for future use in strict mode, and using them as variable names will cause a syntax error.
+// 6. Reserved Keywords: Some keywords are reserved for future use in strict mode, 
+// and using them as variable names will cause a syntax error.
 "use strict"; 
 var let = 10; // SyntaxError: Unexpected strict mode reserved word
 
