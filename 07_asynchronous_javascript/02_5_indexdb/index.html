@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndexDB</title>
+    <script>
+        /*
+        inicio localStorage
+        */
+        const user = {
+            name: 'Jane Smith',
+            age: 30,
+            email: 'jane@example.com'
+        };
+        localStorage.setItem('user', JSON.stringify(user));
+
+        // Retrieving values
+        const name = localStorage.getItem('name'); // 'John Doe'
+        const userObj = JSON.parse(localStorage.getItem('user')); // { name: 'Jane Smith', age: 30, email: 'jane@example.com' }
+        console.log(name);
+        console.log(userObj);
+        //fin localStorage
+
+
+        // inicio indexDB
+
+        // Opening an IndexedDB database
+        debugger;
+        const request = window.indexedDB.open('mydatabase', 1);
+
+        request.onupgradeneeded = (event) => {
+            const db = event.target.result;
+
+            // Creating an object store (similar to a table)
+            const userStore = db.createObjectStore('users', { keyPath: 'id' });
+
+            // Storing a string value
+            userStore.put({ id: 1, name: 'John Doe' });
+
+            // Storing an array
+            userStore.put({ id: 2, emails: ['john@example.com', 'johnny@example.com'] });
+
+            // Storing a nested object
+            userStore.put({
+                id: 3,
+                profile: {
+                    name: 'Jane Smith',
+                    age: 30,
+                    address: {
+                        street: '123 Main St',
+                        city: 'Anytown',
+                        state: 'CA'
+                    }
+                }
+            });
+        };
+
+        request.onsuccess = (event) => {
+            const db = event.target.result;
+            const transaction = db.transaction(['users'], 'readonly');
+            const userStore = transaction.objectStore('users');
+
+            // Querying the database
+            const request = userStore.get(3);
+            request.onsuccess = () => {
+                console.log(request.result.profile.address.city); // 'Anytown'
+            };
+        };
+        // fin indexDB
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
