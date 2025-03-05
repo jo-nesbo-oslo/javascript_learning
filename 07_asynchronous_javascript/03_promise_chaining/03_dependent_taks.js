@@ -3,7 +3,11 @@ function fetchUser(userId) {
 }
 
 function fetchOrders(user) {
-    return Promise.resolve([{ orderId: 1, userId: user.id }]);
+    return Promise.resolve([
+        { orderId: 1, userId: user.id },
+        { orderId: 2, userId: user.id },
+        { orderId: 3, userId: user.id }
+    ]);
 }
 
 fetchUser(101)

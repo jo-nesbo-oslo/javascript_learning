@@ -8,5 +8,6 @@ function promisifiedLoadData() {
             resolve(result));
     });
 }
-promisifiedLoadData().then((data) => 
+promisifiedLoadData()
+    .then((data) => 
     console.log(data));

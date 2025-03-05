@@ -1,6 +1,6 @@
 let fetchData = new Promise((resolve) =>
     setTimeout(() =>
-        resolve("Data loaded"), 3000));
+        resolve("Data loaded"), 300));
 let timeout = new Promise((_, reject) =>
     setTimeout(() =>
         reject("Timeout!"), 2000));
