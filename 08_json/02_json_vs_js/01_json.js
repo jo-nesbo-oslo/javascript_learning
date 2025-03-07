@@ -1,5 +1,0 @@
-{
-    "name": "Amit",
-    "age": 25,
-    "city": "Mumbai"
-}
