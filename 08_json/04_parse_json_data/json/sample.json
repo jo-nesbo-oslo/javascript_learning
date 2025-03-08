@@ -1,0 +1,9 @@
+{
+    "person": {
+        "name": "Ravi",
+        "address": {
+            "city": "Delhi",
+            "pin": 110001
+        }
+    }
+}

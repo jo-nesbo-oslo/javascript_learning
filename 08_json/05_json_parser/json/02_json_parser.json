@@ -1,8 +1,12 @@
-{ 
-    "data": [ 
-        { 
-            "name": "GFG", 
-            "description" : "A Computer Science portal!"
-        } 
-    ] 
+{
+    "data": [
+        {
+            "name": "GFG",
+            "description": "A Computer Science portal!"
+        },
+        {
+            "name": "Baeldung",
+            "description": "A Java portal!"
+        }
+    ]
 }

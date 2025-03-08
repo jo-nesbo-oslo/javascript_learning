@@ -1,5 +1,7 @@
-const jsonA = '[{"name": "Anjali"}, {"name": "Vikas"}]';
-const a = JSON.parse(jsonA);
-a.forEach(person =>
-	console.log(person.name)); 
+const jsonA = '[{"name": "Anjali", "country": "India"}, {"name": "Vikas", "country":"Pakistan"}]';
+const objA = JSON.parse(jsonA);
+objA.forEach(person =>{
+	console.log(`${person.name}, ${person.country}`);
+	console.log();
+}); 
 
