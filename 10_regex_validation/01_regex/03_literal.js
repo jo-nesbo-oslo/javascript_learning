@@ -2,4 +2,4 @@ let regex = /hello/i;
 
 let s = "Hello world";
 
-console.log(regex.test(s));
+console.log(regex.test(s));x

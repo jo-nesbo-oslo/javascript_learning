@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title> 
+		JavaScript RegExp \uxxxx Metacharacter 
+	</title> 
+</head> 
+
+<body style="text-align:center"> 
+	
+	<h1 style="color:green"> 
+		GeeksforGeeks 
+	</h1> 
+	
+	<h2>RegExp \uxxxx Metacharacter</h2> 
+	
+	<p>String: geeky@128</p> 
+	
+	<button onclick="geek()"> 
+		Click it! 
+	</button> 
+	
+	<p id="app"></p> 
+	
+	<script> 
+		function geek() { 
+			var str1 = "geeky@128"; 
+			var regex4 = new RegExp("\\u0067", "gi");		 
+			var replace = "G"; 
+			var match4 = str1.replace(regex4, replace); 
+			document.getElementById("app").innerHTML = 
+					" New string: " + match4; 
+		} 
+	</script> 
+</body> 
+
+</html>					 

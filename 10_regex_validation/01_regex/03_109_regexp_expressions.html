@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title> 
+		JavaScript RegExp \uxxxx Metacharacter 
+	</title> 
+</head> 
+
+<body style="text-align:center"> 
+	
+	<h1 style="color:green"> 
+		GeeksforGeeks 
+	</h1> 
+	
+	<h2>RegExp \uxxxx Metacharacter</h2> 
+	
+	<p>Input String: GeeksforGeeks@_123_$</p> 
+	
+	<button onclick="geek()"> 
+		Click it! 
+	</button> 
+	
+	<p id="app"></p> 
+	
+	<script> 
+		function geek() { 
+			var str1 = "GeeksforGeeks@_123_$"; 
+			var regex4 = /\u0047/gi; 
+			var match4 = str1.match(regex4); 
+
+			document.getElementById("app").innerHTML 
+					= "Found " + match4.length 
+					+ " match: " + match4; 
+		} 
+	</script> 
+</body> 
+
+</html>					 
